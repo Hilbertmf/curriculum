@@ -54,7 +54,7 @@ app.get("/", (req, res) => res.render("index"));
 app.listen(3000, () => console.log(`app listening on port 3000!`));
 ~~~
 
-Most of this should look familiar to you by now, except for the new imported middleware for express-session and passport. We are not actually going to be useing express-session directly, it is a dependency that is used in the background by passport.js. You can take a look at what it does [here](https://github.com/expressjs/session).
+Most of this should look familiar to you by now, except for the new imported middleware for express-session and passport. We are not actually going to be using express-session directly, it is a dependency that is used in the background by passport.js. You can take a look at what it does [here](https://github.com/expressjs/session).
 
 To keep things simple, our view engine is set up to just look in the main directory, and it's looking for a template called `index.ejs` so go ahead and create that:
 
@@ -268,7 +268,7 @@ Now, lets go back and learn how to securely store user passwords so that if anyt
 
 First `npm install bcryptjs`. There is another module called `bcrypt` that does the same thing, but it is written in C++ and is sometimes a pain to get installed. The C++ `bcrypt` is technically faster, so in the future it might be worth getting it running, but for now the modules work the same so we can just use `bcryptjs`.
 
-Once it's installed you need to require it at the top of your app.js and then we are going to pput it to use where we save our passwords to the DB, and where we compare them inside the LocalStrategy.
+Once it's installed you need to require it at the top of your app.js and then we are going to put it to use where we save our passwords to the DB, and where we compare them inside the LocalStrategy.
 
 #### Storing hashed passwords:
 
